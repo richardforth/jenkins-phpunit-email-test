@@ -9,12 +9,12 @@ pipeline {
     }
     stage('Test PHPUnit') {
       steps {
-        sh 'phpunit --version'
+        sh './vendor/bin/phpunit --version'
       }
     }
     stage('Run PHPUnit Tests') {
       steps {
-        sh 'phpunit tests'
+        sh './vendor/bin/phpunit tests'
       }
     }
   }
