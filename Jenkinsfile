@@ -14,7 +14,7 @@ pipeline {
     }
     stage('Run PHPUnit Tests') {
       steps {
-        sh 'phpunit --bootstrap src/autoload.php tests'
+        sh 'phpunit tests'
       }
     }
   }
