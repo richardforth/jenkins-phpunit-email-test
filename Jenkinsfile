@@ -17,5 +17,8 @@ pipeline {
         sh './vendor/bin/phpunit tests'
       }
     }
+    stage('Run PHPUnit TestDox Tests') {
+        sh './vendor/bin/phpunit --testdox tests'
+    }
   }
 }
