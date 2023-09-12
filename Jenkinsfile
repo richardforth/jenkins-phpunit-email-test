@@ -1,5 +1,9 @@
 pipeline {
   agent { label 'php' }
+
+  options {
+      buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '3')
+  }
   
   stages {
     stage('PHP Version') {
